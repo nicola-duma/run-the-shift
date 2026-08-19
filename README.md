@@ -55,9 +55,21 @@ Two things worth knowing before replacing a PDF here:
 Point readers at the page, never at the PDFs directly, so the sheets can be
 updated without breaking a link that is already in print.
 
-## Using these
+## License
 
-Free to download, print, and use. No account, no email gate.
+The sheets and this page are released under
+**[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)**
+(Attribution-NonCommercial-NoDerivatives). Full legal code in [`LICENSE`](LICENSE).
+
+In plain terms: download them, print them, hand them around the shift, photograph a
+sheet and send it to your leads — all of that is fine, and it is the point. Keep the
+credit line and the footer. Do not sell them, and do not publish a changed version.
+
+"NonCommercial" is aimed at resale and repackaging, not at you: printing a sheet and
+using it to run your shift is exactly what it was made for, whoever signs your
+paycheck.
+
+© 2026 Nicola Duma.
 
 ## Disclaimer
 
