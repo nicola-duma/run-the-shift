@@ -44,6 +44,14 @@
     margin:26px 0 0; padding:15px 16px; border-left:3px solid var(--gold);
     background:var(--card); font-size:13px; color:var(--muted); border-radius:0 7px 7px 0;
   }
+  .book{
+    display:flex; gap:18px; align-items:center; margin:0 0 26px; padding:16px;
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+  }
+  .book img{width:96px; height:auto; border-radius:3px; box-shadow:0 2px 8px rgba(0,0,0,.25); flex:none}
+  .book h2{margin:0 0 4px; font-size:17px}
+  .book p{margin:0 0 12px; color:var(--muted); font-size:14px}
+  @media (max-width:480px){ .book{align-items:flex-start} .book img{width:72px} }
   footer{max-width:760px; margin:0 auto; padding:24px 20px 44px;
     color:var(--muted); font-size:12px; border-top:1px solid var(--line); margin-top:30px}
   footer p{margin:0 0 7px}
@@ -65,6 +73,18 @@
     clocks &mdash; so they will make more sense with the book open beside them.
     Print them on Letter unless your office has a large-format printer.
   </p>
+
+  <div class="book">
+    <img src="cover.jpg" alt="Cover of Run the Shift: The Warehouse Supervisor's Field Guide" width="96" height="154">
+    <div>
+      <h2>Run the Shift: The Warehouse Supervisor's Field Guide</h2>
+      <p>Leading floor teams, hitting KPIs, and running a safer shift. The sheets come from this book.</p>
+      <div class="dl">
+        <a class="primary" href="https://www.amazon.com/dp/B0HNR1XD18">Paperback on Amazon</a>
+        <a class="secondary" href="https://www.amazon.com/dp/B0HGW27SV5">Kindle edition</a>
+      </div>
+    </div>
+  </div>
 
   <div class="card">
     <p class="use">Every shift</p>
@@ -117,7 +137,7 @@
 </main>
 
 <footer>
-  <p>Companion sheets for <em>Run the Shift: The Warehouse Supervisor's Field Guide</em> by Nicola Duma.</p>
+  <p>Companion sheets for <a href="https://www.amazon.com/dp/B0HGW27SV5"><em>Run the Shift: The Warehouse Supervisor's Field Guide</em></a> by Nicola Duma.</p>
   <p>Free to download, print, and use. No sign-up, no email required.</p>
   <p>Released under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license">CC BY-NC-ND 4.0</a> &mdash; share them as they are, keep the credit, don't sell them. &copy; 2026 Nicola Duma.</p>
 </footer>
