@@ -6,141 +6,164 @@
 <title>The Supervisor's Field Kit — Run the Shift</title>
 <meta name="description" content="Free printable sheets for readers of Run the Shift: a shift handover sheet, a weekly floor planner, and 52 toolbox talk topics.">
 <style>
-  :root{
-    --navy:#0F2B46; --gold:#D9A441; --ink:#1a1a1a; --muted:#5c6670;
-    --bg:#ffffff; --card:#f6f8fa; --line:#dde3e9;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --ink:#e8ecef; --muted:#9aa5b0; --bg:#12181d; --card:#1a222a; --line:#2a343d; }
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  }
-  header{background:var(--navy); color:#fff; padding:34px 20px 30px}
-  .wrap{max-width:760px; margin:0 auto}
-  header h1{margin:0 0 6px; font-size:27px; letter-spacing:-.3px}
-  header p{margin:0; color:var(--gold); font-size:14px}
-  main{padding:30px 20px 10px}
-  .lede{margin:0 0 26px; color:var(--muted); font-size:15px}
-  .card{
-    background:var(--card); border:1px solid var(--line); border-radius:10px;
-    padding:18px 18px 16px; margin-bottom:14px;
-  }
-  .card h2{margin:0 0 4px; font-size:17px}
-  .card .use{margin:0 0 8px; font-size:12px; text-transform:uppercase;
-    letter-spacing:.6px; color:var(--gold); font-weight:700}
-  .card p{margin:0 0 14px; color:var(--muted); font-size:14px}
-  .dl{display:flex; flex-wrap:wrap; gap:10px}
-  .dl a{
-    display:inline-block; padding:9px 15px; border-radius:7px; text-decoration:none;
-    font-size:14px; font-weight:600; border:1px solid var(--navy);
-  }
-  .dl a.primary{background:var(--navy); color:#fff}
-  .dl a.secondary{background:transparent; color:var(--ink); border-color:var(--line)}
-  .dl a:hover{opacity:.85}
-  .note{
-    margin:26px 0 0; padding:15px 16px; border-left:3px solid var(--gold);
-    background:var(--card); font-size:13px; color:var(--muted); border-radius:0 7px 7px 0;
-  }
-  .book{
-    display:flex; gap:18px; align-items:center; margin:0 0 26px; padding:16px;
-    background:var(--card); border:1px solid var(--line); border-radius:10px;
-  }
-  .book img{width:96px; height:auto; border-radius:3px; box-shadow:0 2px 8px rgba(0,0,0,.25); flex:none}
-  .book h2{margin:0 0 4px; font-size:17px}
-  .book p{margin:0 0 12px; color:var(--muted); font-size:14px}
-  @media (max-width:480px){ .book{align-items:flex-start} .book img{width:72px} }
-  footer{max-width:760px; margin:0 auto; padding:24px 20px 44px;
-    color:var(--muted); font-size:12px; border-top:1px solid var(--line); margin-top:30px}
-  footer p{margin:0 0 7px}
+:root{
+  --navy:#0F2B46; --navy-2:#173A5C; --gold:#D9A441; --gold-2:#E8B95A;
+  --bg:#F3F5F8; --card:#FFFFFF; --ink:#14202B; --muted:#56616C; --line:#DCE2E8;
+  --thumb:#E9EDF2;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0A1520; --card:#122233; --ink:#E8ECEF; --muted:#9AA7B3; --line:#22374B; --thumb:#0D1B29; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:inherit}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+
+/* header */
+header{background:var(--navy);color:#fff}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;padding-top:3.25rem;padding-bottom:3.5rem}
+.cover{width:160px;height:auto;border-radius:4px;box-shadow:0 18px 40px rgba(0,0,0,.45);display:block}
+.eyebrow{margin:0 0 .7rem;color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+h1{margin:0;font-size:clamp(2rem,5vw,2.9rem);line-height:1.1;letter-spacing:-.01em}
+.rule{width:4rem;height:4px;background:var(--gold);border-radius:2px;margin:1.2rem 0}
+.lead{margin:0;max-width:36rem;color:#D3DCE5;font-size:1.05rem}
+.lead em{color:#fff}
+.buy{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.7rem 1.15rem;border-radius:8px;
+  font-weight:700;font-size:.95rem;text-decoration:none;white-space:nowrap}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-2)}
+.btn-ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+
+/* intro strip */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:-1.6rem 0 0;padding:0;list-style:none}
+.facts li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.15rem;font-size:.93rem;color:var(--muted)}
+.facts b{display:block;color:var(--ink);font-size:1rem;margin-bottom:.1rem}
+
+/* sheets */
+h2.section{font-size:1.35rem;margin:3rem 0 1rem}
+.sheets{display:grid;gap:1rem;margin:0;padding:0;list-style:none}
+.sheet{display:grid;grid-template-columns:190px 1fr;gap:1.5rem;align-items:center;
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.25rem}
+.thumb{display:grid;place-items:center;height:200px;background:var(--thumb);border-radius:8px;padding:.75rem}
+.thumb img{max-width:100%;max-height:176px;width:auto;height:auto;display:block;
+  border:1px solid var(--line);box-shadow:0 4px 14px rgba(15,43,70,.15);background:#fff}
+.tag{display:inline-block;margin:0 0 .45rem;padding:.12rem .6rem;border-radius:999px;
+  background:var(--navy);color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+@media (prefers-color-scheme: dark){.tag{background:var(--gold);color:var(--navy)}}
+.sheet h3{margin:0 0 .35rem;font-size:1.2rem}
+.sheet p{margin:0 0 1rem;color:var(--muted);font-size:.96rem}
+.dl{display:flex;flex-wrap:wrap;gap:.6rem}
+.dl a{display:inline-flex;flex-direction:column;align-items:flex-start;padding:.55rem 1rem;border-radius:8px;
+  text-decoration:none;font-weight:700;font-size:.93rem;line-height:1.3}
+.dl a small{font-weight:400;font-size:.78rem;opacity:.8}
+.dl .main{background:var(--navy);color:#fff}
+.dl .main:hover{background:var(--navy-2)}
+.dl .alt{border:1px solid var(--line);color:var(--ink)}
+.dl .alt:hover{border-color:var(--muted)}
+@media (prefers-color-scheme: dark){.dl .main{background:var(--gold);color:var(--navy)}.dl .main:hover{background:var(--gold-2)}}
+
+/* note + footer */
+.note{margin:2.5rem 0 0;padding:1.1rem 1.25rem;border-left:4px solid var(--gold);background:var(--card);
+  border-radius:0 10px 10px 0;font-size:.9rem;color:var(--muted)}
+.note b{color:var(--ink)}
+footer{margin-top:3rem;padding:1.75rem 0 2.75rem;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+footer p{margin:.3rem 0}
+
+@media (max-width:720px){
+  body{font-size:16px}
+  .hero{grid-template-columns:1fr;gap:1.4rem;padding-top:2rem;padding-bottom:3rem}
+  .cover{width:104px}
+  .facts{grid-template-columns:1fr}
+  .sheet{grid-template-columns:1fr;gap:1rem;padding:1rem}
+  .thumb{height:170px}
+  .thumb img{max-height:146px}
+  .dl a{flex:1 1 9rem}
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap">
-    <h1>The Supervisor's Field Kit</h1>
-    <p>Free companion sheets for readers of <em>Run the Shift</em></p>
+  <div class="wrap hero">
+    <img class="cover" src="cover.jpg" width="160" height="256" alt="Cover of Run the Shift: The Warehouse Supervisor's Field Guide by Nicola Duma">
+    <div>
+      <p class="eyebrow">Free companion sheets</p>
+      <h1>The Supervisor's Field Kit</h1>
+      <div class="rule"></div>
+      <p class="lead">Three sheets you can print and use on the floor, from <em>Run the Shift: The Warehouse Supervisor's Field Guide</em>. They are built around the numbers in the book &mdash; the UPH scale, the dock-to-stock window, the corrective-action clocks &mdash; so they make more sense with the book open beside them.</p>
+      <div class="buy">
+        <a class="btn btn-gold" href="https://www.amazon.com/dp/B0HNR1XD18">Paperback on Amazon</a>
+        <a class="btn btn-ghost" href="https://www.amazon.com/dp/B0HGW27SV5">Kindle edition</a>
+      </div>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
-  <p class="lede">
-    Three sheets you can print and use on the floor. They are built around the numbers
-    in the book &mdash; the UPH scale, the dock-to-stock window, the corrective-action
-    clocks &mdash; so they will make more sense with the book open beside them.
-    Print them on Letter unless your office has a large-format printer.
-  </p>
+  <ul class="facts">
+    <li><b>Free, no sign-up</b>No email required. Download and print.</li>
+    <li><b>Letter or Tabloid</b>Print on Letter unless your office has a large-format printer.</li>
+    <li><b>Built on the book</b>The same numbers and clocks you read in the chapters.</li>
+  </ul>
 
-  <div class="book">
-    <img src="cover.jpg" alt="Cover of Run the Shift: The Warehouse Supervisor's Field Guide" width="96" height="154">
-    <div>
-      <h2>Run the Shift: The Warehouse Supervisor's Field Guide</h2>
-      <p>Leading floor teams, hitting KPIs, and running a safer shift. The sheets come from this book.</p>
-      <div class="dl">
-        <a class="primary" href="https://www.amazon.com/dp/B0HNR1XD18">Paperback on Amazon</a>
-        <a class="secondary" href="https://www.amazon.com/dp/B0HGW27SV5">Kindle edition</a>
+  <h2 class="section">The sheets</h2>
+  <ul class="sheets">
+    <li class="sheet">
+      <a class="thumb" href="shift_handover_LETTER.pdf" aria-label="Open the Shift Handover Sheet, Letter size">
+        <img src="previews/shift_handover.jpg" width="425" height="550" alt="Preview of the Shift Handover Sheet" loading="lazy">
+      </a>
+      <div>
+        <span class="tag">Every shift</span>
+        <h3>Shift Handover Sheet</h3>
+        <p>What the next lead actually needs from you: open order queues, open dock receipts, equipment locked out and who holds the lock, open safety items on their clocks, and a head count of who is still in the building.</p>
+        <div class="dl">
+          <a class="main" href="shift_handover_LETTER.pdf">Letter <small>8.5&times;11&Prime; &middot; PDF 64 KB</small></a>
+          <a class="alt" href="shift_handover_TABLOID.pdf">Tabloid <small>11&times;17&Prime; &middot; PDF 64 KB</small></a>
+        </div>
       </div>
-    </div>
-  </div>
+    </li>
+    <li class="sheet">
+      <a class="thumb" href="weekly_planner_LETTER.pdf" aria-label="Open the Weekly Floor Planner, Letter size">
+        <img src="previews/weekly_planner.jpg" width="550" height="425" alt="Preview of the Weekly Floor Planner" loading="lazy">
+      </a>
+      <div>
+        <span class="tag">Every week</span>
+        <h3>Weekly Floor Planner</h3>
+        <p>Seven days across three bands &mdash; shift, safety, quality &mdash; with the open-items list beside it, and the Perfect Order Rate calculation along the bottom so you can see what four decent sub-rates actually multiply out to.</p>
+        <div class="dl">
+          <a class="main" href="weekly_planner_LETTER.pdf">Letter <small>11&times;8.5&Prime; &middot; PDF 66 KB</small></a>
+          <a class="alt" href="weekly_planner_TABLOID.pdf">Tabloid <small>17&times;11&Prime; &middot; PDF 66 KB</small></a>
+        </div>
+      </div>
+    </li>
+    <li class="sheet">
+      <a class="thumb" href="toolbox_talk_52_LETTER.pdf" aria-label="Open the 52 Toolbox Talk Topics, Letter size">
+        <img src="previews/toolbox_talk_52.jpg" width="425" height="550" alt="Preview of the 52 Toolbox Talk Topics" loading="lazy">
+      </a>
+      <div>
+        <span class="tag">Once &mdash; lasts a year</span>
+        <h3>52 Toolbox Talk Topics</h3>
+        <p>One topic per week of the year, each tagged with the chapter that covers it. For the Thursday morning when you need something worth ten minutes and you have not had time to think about it.</p>
+        <div class="dl">
+          <a class="main" href="toolbox_talk_52_LETTER.pdf">Letter <small>8.5&times;11&Prime; &middot; PDF 67 KB</small></a>
+          <a class="alt" href="toolbox_talk_52_TABLOID.pdf">Tabloid <small>11&times;17&Prime; &middot; PDF 67 KB</small></a>
+        </div>
+      </div>
+    </li>
+  </ul>
 
-  <div class="card">
-    <p class="use">Every shift</p>
-    <h2>Shift Handover Sheet</h2>
-    <p>
-      What the next lead actually needs from you: open order queues, open dock receipts,
-      equipment locked out and who holds the lock, open safety items on their clocks,
-      and a head count of who is still in the building.
-    </p>
-    <div class="dl">
-      <a class="primary" href="shift_handover_LETTER.pdf">Letter &middot; 8.5&times;11&Prime;</a>
-      <a class="secondary" href="shift_handover_TABLOID.pdf">Tabloid &middot; 11&times;17&Prime;</a>
-    </div>
-  </div>
+  <p class="note"><b>Working sheets, not records.</b> These are personal working sheets, not facility records. They do not replace your site's own forms, logs, or safety program, and nothing here is legal or safety-engineering advice. Confirm anything you intend to write into a procedure with your own EHS professional. In an emergency, call 911.</p>
 
-  <div class="card">
-    <p class="use">Every week</p>
-    <h2>Weekly Floor Planner</h2>
-    <p>
-      Seven days across three bands &mdash; shift, safety, quality &mdash; with the open-items
-      list beside it, and the Perfect Order Rate calculation along the bottom so you can see
-      what four decent sub-rates actually multiply out to.
-    </p>
-    <div class="dl">
-      <a class="primary" href="weekly_planner_LETTER.pdf">Letter &middot; 11&times;8.5&Prime;</a>
-      <a class="secondary" href="weekly_planner_TABLOID.pdf">Tabloid &middot; 17&times;11&Prime;</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <p class="use">Once &mdash; lasts a year</p>
-    <h2>52 Toolbox Talk Topics</h2>
-    <p>
-      One topic per week of the year, each tagged with the chapter that covers it.
-      For the Thursday morning when you need something worth ten minutes and you have
-      not had time to think about it.
-    </p>
-    <div class="dl">
-      <a class="primary" href="toolbox_talk_52_LETTER.pdf">Letter &middot; 8.5&times;11&Prime;</a>
-      <a class="secondary" href="toolbox_talk_52_TABLOID.pdf">Tabloid &middot; 11&times;17&Prime;</a>
-    </div>
-  </div>
-
-  <p class="note">
-    These are personal working sheets, not facility records. They do not replace your
-    site's own forms, logs, or safety program, and nothing here is legal or
-    safety-engineering advice. Confirm anything you intend to write into a procedure with
-    your own EHS professional. In an emergency, call 911.
-  </p>
+  <footer>
+    <p>Companion sheets for <a href="https://www.amazon.com/dp/B0HGW27SV5"><em>Run the Shift: The Warehouse Supervisor's Field Guide</em></a> by Nicola Duma.</p>
+    <p>Free to download, print, and use. No sign-up, no email required.</p>
+    <p>Released under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license">CC BY-NC-ND 4.0</a> &mdash; share them as they are, keep the credit, don't sell them. &copy; 2026 Nicola Duma.</p>
+  </footer>
 </main>
-
-<footer>
-  <p>Companion sheets for <a href="https://www.amazon.com/dp/B0HGW27SV5"><em>Run the Shift: The Warehouse Supervisor's Field Guide</em></a> by Nicola Duma.</p>
-  <p>Free to download, print, and use. No sign-up, no email required.</p>
-  <p>Released under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license">CC BY-NC-ND 4.0</a> &mdash; share them as they are, keep the credit, don't sell them. &copy; 2026 Nicola Duma.</p>
-</footer>
 
 </body>
 </html>
